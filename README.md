@@ -1,1 +1,1 @@
-Starting on the first language
+Working on C functions and nested loops
