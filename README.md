@@ -1,1 +1,1 @@
-Working on C functions and nested loops
+Working on debugging in C
