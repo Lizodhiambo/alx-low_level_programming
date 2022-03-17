@@ -1,6 +1,6 @@
 /*
  * File: 1-isdigit.c
- * Auth: Swaidertc
+ * Auth: Lizodhiambo
 */
 
 #include "main.h"
