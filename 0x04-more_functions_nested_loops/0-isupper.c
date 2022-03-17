@@ -1,6 +1,6 @@
 /*
  * File: 0-isupper.c
- * Auth: Swaidertc
+ * Auth: Lizodhiambo
  */
 
 #include "main.h"
