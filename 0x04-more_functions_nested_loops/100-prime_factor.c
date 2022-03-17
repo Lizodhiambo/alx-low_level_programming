@@ -1,6 +1,6 @@
 /*
  * File: 100-prime_factor.c
- * Auth: Swaidertc
+ * Auth: Lizodhiambo
 */
 
 #include <stdio.h>
