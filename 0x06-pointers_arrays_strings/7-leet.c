@@ -1,25 +1,28 @@
 #include "main.h"
 
 /**
- * leet - replaces specific characters with specific numbers
- * @c: string to do the transformation
- * Return: transformed string
+ * leet - encodes a string in 1337
+ * @s: string to be encoded
+ *
+ * Return: the resulting string;
  */
-char *leet(char *c)
+char *leet(char *s)
 {
-	char l1[] = "AEOLT";
-	char l2[] = "aeolt";
-	char l3[] = "43017";
-	unsigned int i, j;
+	int i, j;
 
-	for (i = 0; i < strlen(c); i++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if ((c[i] == l1[j]) || (c[i] == l2[j]))
-				c[i] = l3[j];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+			}
 		}
 	}
 
-	return (c);
+	return (s);
 }
