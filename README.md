@@ -1,1 +1,1 @@
-Working on C language projects
+Working on more arrays, pointers and strings
