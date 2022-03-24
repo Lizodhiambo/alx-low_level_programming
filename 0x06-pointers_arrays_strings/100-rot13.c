@@ -1,31 +1,30 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * rot13 - rotates the letters in a string by 13
- * @c: string to apply the rotation to
- * Return: encoded string
+ * rot13 - encode string with rot13
+ * @s: string to encode
+ *
+ * Return: string
  */
 
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	char l1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char l2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char *d = malloc(strlen(c) * sizeof(char));
-	unsigned int i, j;
+	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	strcpy(d, c);
-
-	for (i = 0; i < strlen(c); i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < strlen(l1); j++)
+		for (j = 0; j < 52; j++)
 		{
-			if (c[i] == l1[j])
-				d[i] = l2[j];
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
 		}
 	}
-
-	strcpy(c, d);
-
-	return (c);
+	return (s);
 }
